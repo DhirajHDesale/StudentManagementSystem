@@ -46,7 +46,7 @@ public class EditData extends HttpServlet {
             out.println("<title>Servlet EditData</title>");   
             out.println("<style>");
             
-            out.println("table {margin-top:200px;margin-left:300px;");
+            out.println("table {margin-top:10px;margin-left:500px;");
             out.println("</style>");
             out.println("</head>");
             out.println("<body>");
@@ -66,7 +66,8 @@ public class EditData extends HttpServlet {
               rs.next();
               
               out.println("<form action='UpdateData?id="+id+"' method='post'>");
-               out.println("<table align>");
+              out.println("<h2 style='margin-top:200px; text-align:center;'>Update The Record</h2>");
+               out.println("<table>");
        out.println("<tr>");
          
         out.println("<td>Enter Name: </td><td><input type='text'  name='name' value='"+rs.getString(2)+"'> </td></tr>");
@@ -75,7 +76,8 @@ public class EditData extends HttpServlet {
               
                  out.println("<td><input type='submit' value='edit'></td>");
                    out.println("<td><input type='reset' value='cancel'></td>");
-                         out.println("</table>");    
+                         out.println("</table>");
+                         
                 out.println("</form>");  
                 
               

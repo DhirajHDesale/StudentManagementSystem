@@ -43,12 +43,13 @@ public class DisplayData extends HttpServlet {
             out.println("<head>");
             out.println("<title>Servlet DisplayData</title>"); 
                out.println("<style>");
-out.println("table { border-collapse: collapse; margin-left: 250px; margin-top: 200px; }");
+out.println("table { border-collapse: collapse; margin-left: 350px; margin-top: 60px; }");
 out.println("th,td { border: 1px solid black; padding: 8px; }");
 out.println("</style>");
             out.println("</head>");
             
             out.println("<body>");
+            out.println("<h1 style='text-align:center; margin-top: 200px; margin-left:60px;'>List of Students Registered</h1>");
           out.println("<table>");
         out.println("<tr><th>Id</th><th>Name</th><th>Phone</th><th>Email</th><th>Gender</th><th>Edit</th><th>Delete</th></tr>");
  
@@ -68,8 +69,8 @@ out.println("<td> "+rs.getString("name")+"</td>");
 out.println("<td> "+rs.getString("phoneno")+"</td>");
 out.println("<td> "+rs.getString("email")+"</td>");
 out.println("<td> "+rs.getString("gender")+"</td>");
-out.println("<td><a href='EditData?id="+rs.getInt(1)+"'>Edit</a></td>");
-out.println("<td><a href='DeleteData?id="+rs.getInt(1)+"'>Delete</a></td>");
+out.println("<td><button style=' background-color:green ; color:white;'><a href='EditData?id="+rs.getInt(1)+"'><span style='color:#fff; font-size:20px'>Edit</span></a></button></td>");
+out.println("<td><button style='background-color:red; color:white;'><a href='DeleteData?id="+rs.getInt(1)+"'><span style='color:#fff; font-size:20px'>Delete</a></span></button></td>");
 out.println("</tr>");
    
     }
